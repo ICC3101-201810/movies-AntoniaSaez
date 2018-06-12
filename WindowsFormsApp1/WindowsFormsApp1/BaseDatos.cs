@@ -16,6 +16,16 @@ namespace WindowsFormsApp1
         List<Persona> listaDirectores;
         List<Estudio> listaEstudios;
 
+        public BaseDatos()
+        {
+            listaPeliculas = new List<Pelicula>();
+            listaPersonas = new List<Persona>();
+            listaActores = new List<Persona>();
+            listProductores = new List<Persona>();
+            listaDirectores = new List<Persona>();
+            listaEstudios = new List<Estudio>();
+
+        }
         public List<Pelicula> ObtenerListaPeliculas()
         {
             return listaPeliculas; 
@@ -38,5 +48,19 @@ namespace WindowsFormsApp1
             return listaPeliculas;
         }
 
+        public void AgregarPersona(Persona persona)
+        {
+            listaPersonas.Add(persona);
+        }
+
+        public void AgregarPelicula(Pelicula pelicula)
+        {
+            listaPeliculas.Add(pelicula);
+        }
+
+        public void AgregarEstudio(Estudio estudio)
+        {
+            listaEstudios.Add(estudio);
+        }
     }
 }

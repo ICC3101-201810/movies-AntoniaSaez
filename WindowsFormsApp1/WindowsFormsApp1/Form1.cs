@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WindowsFormsApp1
 {
@@ -19,6 +21,11 @@ namespace WindowsFormsApp1
 
             nuevabase = minuevabasedatos;
             panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelPeliculas.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelActor.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelProductor.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelDirector.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelEstudio.Dock = System.Windows.Forms.DockStyle.Fill;
 
             panelMenu.BringToFront();
             listBoxSearch.Hide();
@@ -102,27 +109,27 @@ namespace WindowsFormsApp1
 
         private void listBoxListaPeliculas_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            panelPeliculas.BringToFront();
         }
 
         private void listBoxListaActores_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            panelActor.BringToFront();
         }
 
         private void listBoxListaDirectores_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            panelDirector.BringToFront();
         }
 
         private void listBoxListaProductores_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            panelProductor.BringToFront();
         }
 
         private void listBoxListaEstudios_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            panelEstudio.BringToFront();
         }
 
         private void buttonPeliculas_Click(object sender, EventArgs e)
@@ -231,5 +238,23 @@ namespace WindowsFormsApp1
                 this.listBoxListaEstudios.Items.Add(nombre_estudio);
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            BinaryFormatter bin = new BinaryFormatter();
+            if (File.Exists("../../Serialized.txt"))
+            {
+                Stream stream = new FileStream("../../Serialized.txt", FileMode.Open, FileAccess.Write);
+                bin.Serialize(stream, nuevabase);
+                stream.Close();
+            }
+            else
+            {
+                Stream stream = new FileStream("../../Serialized.txt", FileMode.Create, FileAccess.Write);
+                bin.Serialize(stream, nuevabase);
+                stream.Close();
+            }
+            base.OnFormClosing(e);
+        }
     }
+    
 }
