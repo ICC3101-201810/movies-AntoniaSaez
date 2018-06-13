@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81D2CC73-06C0-48B5-A018-AFDF78D7A77E}</ProjectGuid>
+    <ProjectGuid>{67A42658-0AB5-4D32-A60C-910BB06C3C5D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>WindowsFormsApp2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,12 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseDatos.cs" />
-    <Compile Include="PeliculaProductor.cs" />
-    <Compile Include="PeliculaActor.cs" />
-    <Compile Include="Estudio.cs" />
-    <Compile Include="Pelicula.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="Pelicula.cs" />
+    <Compile Include="BaseDatos.cs" />
+    <Compile Include="Estudio.cs" />
+    <Compile Include="PeliculaActor.cs" />
+    <Compile Include="PeliculaProductor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

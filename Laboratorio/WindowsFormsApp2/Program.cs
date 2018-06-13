@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Globalization;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace WindowsFormsApp1
+
+namespace WindowsFormsApp2
 {
     static class Program
     {
@@ -28,7 +28,6 @@ namespace WindowsFormsApp1
             else
             {
                 nuevabase = new BaseDatos();
-                
                 DateTime fecha = DateTime.ParseExact("1968-09-12 09", "yyyy-MM-dd HH", System.Globalization.CultureInfo.InvariantCulture);
                 Persona nuevapersona = new Persona("Brad", "Pitt", fecha, "Director", "Actor talentoso");
                 nuevabase.AgregarPersona(nuevapersona);
@@ -36,9 +35,13 @@ namespace WindowsFormsApp1
                 nuevabase.AgregarEstudio(nuevoestudio);
                 Pelicula nuevapelicula = new Pelicula("El extraño caso de Benjamin Button", nuevapersona, fecha, "Muy buena", "$2000", nuevoestudio);
                 nuevabase.AgregarPelicula(nuevapelicula);
+
             }
-                Application.EnableVisualStyles();
+            
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+
             Application.Run(new Form1(nuevabase));
         }
     }

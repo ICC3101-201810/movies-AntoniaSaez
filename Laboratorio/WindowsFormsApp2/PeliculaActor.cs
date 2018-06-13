@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp2
 {
+    [Serializable]
     public class PeliculaActor
     {
         Pelicula pelicula;
