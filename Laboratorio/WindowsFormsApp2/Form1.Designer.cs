@@ -77,7 +77,9 @@
             this.listBoxSearch.ItemHeight = 16;
             this.listBoxSearch.Location = new System.Drawing.Point(34, 14);
             this.listBoxSearch.Name = "listBoxSearch";
+            this.listBoxSearch.ScrollAlwaysVisible = true;
             this.listBoxSearch.Size = new System.Drawing.Size(349, 244);
+            this.listBoxSearch.Sorted = true;
             this.listBoxSearch.TabIndex = 14;
             this.listBoxSearch.SelectedIndexChanged += new System.EventHandler(this.listBoxSearch_SelectedIndexChanged_1);
             // 
@@ -134,6 +136,7 @@
             this.buttonVolverAtras.TabIndex = 8;
             this.buttonVolverAtras.Text = "Volver Atras";
             this.buttonVolverAtras.UseVisualStyleBackColor = true;
+            this.buttonVolverAtras.Click += new System.EventHandler(this.buttonVolverAtras_Click_1);
             // 
             // buttonEstudios
             // 

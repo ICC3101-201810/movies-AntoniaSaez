@@ -46,10 +46,14 @@ namespace WindowsFormsApp2
                 {
                     if (dato.Contains(caracteres))
                     {
-                        this.listBoxSearch.Items.Add(dato);
+                        continue;
 
                     }
-                    this.listBoxSearch.Items.Add(dato);
+                    else
+                    {
+                        this.listBoxSearch.Items.Add(dato);
+                    }
+                    
                 }
                 
 
@@ -133,6 +137,11 @@ namespace WindowsFormsApp2
         private void listBoxSearch_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonVolverAtras_Click_1(object sender, EventArgs e)
+        {
+            listBoxSearch.Hide();
         }
     }
 }
