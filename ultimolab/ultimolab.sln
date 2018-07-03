@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ultimolab", "ultimolab\ultimolab.csproj", "{3E59A3C1-8581-4E0C-ABB3-BB300FF360BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E59A3C1-8581-4E0C-ABB3-BB300FF360BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E59A3C1-8581-4E0C-ABB3-BB300FF360BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E59A3C1-8581-4E0C-ABB3-BB300FF360BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E59A3C1-8581-4E0C-ABB3-BB300FF360BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {657DA7A7-1AC1-49DF-B5FB-62D95BC59EA5}
+	EndGlobalSection
+EndGlobal
